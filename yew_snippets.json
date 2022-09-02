@@ -1,0 +1,58 @@
+{
+  "YewProperties": {
+    "prefix": ["prop"],
+    "body": [
+      "#[derive(Properties, PartialEq)]",
+      "pub struct ${1:PropName} {",
+      "\t${2:field}: ${0:Type}",
+      "}"
+    ],
+    "description": "Properties for function component"
+  },
+  "YewFunctionComponent": {
+    "prefix": ["fc"],
+    "body": [
+      "#[function_component(${1:CompName})]",
+      "pub fn ${2:comp_name}() -> Html {",
+      "\t$0",
+      "\thtml!{",
+      "\t\t",
+      "\t}",
+      "}"
+    ],
+    "description": "Function component without props"
+  },
+  "YewFunctionComponentWithProps": {
+    "prefix": ["fcp"],
+    "body": [
+      "#[derive(Properties, PartialEq)]",
+      "pub struct ${1:PropName} {",
+      "\t${2:field}: ${3:Type}",
+      "}",
+      "",
+      "#[function_component(${4:CompName})]",
+      "pub fn ${5:comp_name}(props: &$1) -> Html {",
+      "\t$0",
+      "\thtml!{",
+      "\t\t",
+      "\t}",
+      "}"
+    ],
+    "description": "Function component with props"
+  },
+  "YewUseState": {
+    "prefix": ["usestate", "us"],
+    "body": "let $1 = use_state($0);",
+    "description": "Use state"
+  },
+  "YewCallbackOnce": {
+    "prefix": ["callbackonce", "cbo"],
+    "body": ["Callback::once(move |e: $1| {", "\t$0", "})"],
+    "description": "Callback once"
+  },
+  "YewCallbackFrom": {
+    "prefix": ["callbackfrom", "cbf"],
+    "body": ["Callback::from(move |e: $1| {", "\t$0", "})"],
+    "description": "Callback from"
+  }
+}
