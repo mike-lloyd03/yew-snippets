@@ -54,5 +54,15 @@
     "prefix": ["callbackfrom", "cbf"],
     "body": ["Callback::from(move |e: $1| {", "\t$0", "})"],
     "description": "Callback from"
+  },
+  "YewLink": {
+    "prefix": ["link", "ln"],
+    "body": ["<Link<Route> to=$1>$0</Link<Route>>"],
+    "description": "Link"
+  },
+  "YewLinkClasses": {
+    "prefix": ["linkclasses", "lnc"],
+    "body": ["<Link<Route> to=$1 classes=$2>$0</Link<Route>>"],
+    "description": "Link with classes"
   }
 }
