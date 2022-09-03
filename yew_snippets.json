@@ -4,7 +4,7 @@
     "body": [
       "#[derive(Properties, PartialEq)]",
       "pub struct ${1:PropName} {",
-      "\t${2:field}: ${0:Type},",
+      "\tpub ${2:field}: ${0:Type},",
       "}"
     ],
     "description": "Properties for function component"
@@ -27,7 +27,7 @@
     "body": [
       "#[derive(Properties, PartialEq)]",
       "pub struct ${1:PropName} {",
-      "\t${2:field}: ${3:Type},",
+      "\tpub ${2:field}: ${3:Type},",
       "}",
       "",
       "#[function_component(${4:CompName})]",
